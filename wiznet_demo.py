@@ -5,8 +5,11 @@ import requests
 from constants import *
 from commons import *
 
+
+# get Modbus Request command.
 mb_req = mb_rtu_make_request( 1, 3, READ_OFFSET, READ_COUNT * 2)
 
+# sock is connecting Wiznet. Here, Wiznet configured as TCP Server.
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

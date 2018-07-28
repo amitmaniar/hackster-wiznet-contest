@@ -9,6 +9,7 @@ def bestr_to_u16( st, start=0):
     """Given big-endian binary string, return bytes[0-1] as int"""
     return( (ord(st[start])<<8) + ord(st[start+1]))
 
+# Generate Modbus RTU request from slave_id, function code, register offset and no of registers.
 def mb_rtu_make_request( slave_id, func_code, read_offset, read_count ):
 
     command = None
